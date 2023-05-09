@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer">
+   <children>
+      <Label layoutX="315.0" layoutY="23.0" text="Add a New Customer">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="69.0" text="Customer Id" />
+      <Label layoutX="14.0" layoutY="114.0" text="Name" />
+      <Label layoutX="14.0" layoutY="163.0" text="Country" />
+      <Label layoutX="14.0" layoutY="216.0" text="Address" />
+      <Label layoutX="14.0" layoutY="271.0" text="State" />
+      <TextField fx:id="customerIdTxt" editable="false" layoutX="102.0" layoutY="65.0" />
+      <TextField fx:id="nameTxt" layoutX="102.0" layoutY="110.0" />
+
+      <TextField fx:id="addressTxt" layoutX="102.0" layoutY="212.0" />
+
+      <ComboBox fx:id="countryComboBox" layoutX="102.0" layoutY="159.0" onAction="#countrySelected" prefWidth="150.0" />
+      <ComboBox fx:id="firstLevelDivisionComboBox" layoutX="102.0" layoutY="267.0" prefWidth="150.0" />
+      <Button fx:id="saveNewButton" layoutX="57.0" layoutY="420.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Save New Customer" />
+      <TextField fx:id="customerPostalCode" layoutX="102.0" layoutY="332.0" />
+      <Label layoutX="14.0" layoutY="336.0" text="Postal Code" />
+      <Label layoutX="14.0" layoutY="386.0" text="Phone" />
+      <TextField fx:id="customerPhone" layoutX="102.0" layoutY="382.0" />
+
+      <TableView fx:id="addCustomerTable" layoutX="273.0" layoutY="131.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="513.0">
+         <columns>
+            <TableColumn maxWidth="-1.0" minWidth="-Infinity" prefWidth="-1.0" text="C1" />
+            <TableColumn fx:id="tableCustomerID" prefWidth="72.0" text="Cust_ID" />
+            <TableColumn fx:id="tableCustomerName" prefWidth="72.0" text="Cust_Name" />
+            <TableColumn fx:id="tableAddress" prefWidth="72.0" text="Address" />
+            <TableColumn fx:id="tablePostalCode" prefWidth="72.0" text="Postal_Code" />
+            <TableColumn fx:id="tablePhone" prefWidth="72.0" text="Phone" />
+            <TableColumn fx:id="tableDivisionID" minWidth="-1.0" prefWidth="72.0" text="Division_ID" />
+            <TableColumn fx:id="tableCountryID" minWidth="-1.0" prefWidth="72.0" text="Country_ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="466.0" layoutY="102.0" text="Customer Table" />
+      <Label layoutX="97.0" layoutY="19.0" prefHeight="35.0" prefWidth="160.0" text="Fill out the fields below then press &quot;Save New Customer&quot;." wrapText="true" />
+      <Button layoutX="346.0" layoutY="382.0" mnemonicParsing="false" onAction="#backToMenuPagePushed" text="Back to Menu Page" />
+
+   </children>
+</AnchorPane>

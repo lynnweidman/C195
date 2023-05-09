@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="960.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAnAppointmentController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b9bf" height="123.0" layoutX="511.0" layoutY="422.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b9bf" height="123.0" layoutX="194.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+        <Label layoutX="11.0" layoutY="8.0" text="Update Appointments">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
+        <Label layoutX="10.0" layoutY="45.0" text="Appointment ID" />
+        <Label layoutX="10.0" layoutY="329.0" text="Name" />
+        <Label layoutX="565.0" layoutY="370.0" text="Title" />
+        <Label layoutX="23.0" layoutY="370.0" text="Description" />
+        <Label layoutX="210.0" layoutY="370.0" text="Location" />
+        <Label layoutX="409.0" layoutY="370.0" text="Type" />
+        <Label layoutX="241.0" layoutY="441.0" text="Start Date" />
+        <Label layoutX="189.0" layoutY="329.0" text="Customer ID" />
+        <Label layoutX="717.0" layoutY="329.0" text="User ID" />
+        <TextField fx:id="appointmentIdTXT" editable="false" layoutX="105.0" layoutY="41.0" prefHeight="25.0" prefWidth="32.0" />
+        <TextField fx:id="titleTXT" layoutX="594.0" layoutY="366.0" prefHeight="25.0" prefWidth="86.0" />
+        <TextField fx:id="descriptionTXT" layoutX="94.0" layoutY="366.0" prefHeight="25.0" prefWidth="97.0" />
+        <TextField fx:id="locationTXT" layoutX="273.0" layoutY="366.0" prefHeight="25.0" prefWidth="113.0" />
+        <TextField fx:id="typeTXT" layoutX="445.0" layoutY="366.0" prefHeight="25.0" prefWidth="97.0" />
+        <TextField fx:id="customerIdTXT" layoutX="262.0" layoutY="325.0" prefHeight="25.0" prefWidth="32.0" />
+        <TextField fx:id="userIdTXT" layoutX="767.0" layoutY="325.0" prefHeight="25.0" prefWidth="32.0" />
+        <Label layoutX="209.0" layoutY="476.0" text="Select Start Hour" />
+        <Button layoutX="86.0" layoutY="558.0" mnemonicParsing="false" onAction="#updateAppointmentButtonPressed" prefHeight="56.0" prefWidth="113.0" text="Update My Appointment" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+        <Button layoutX="536.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonPressed" prefHeight="62.0" prefWidth="233.0" text="TO CANCEL APPOINTMENT  Select appointment from below then press here" textAlignment="CENTER" wrapText="true" />
+        <TableView fx:id="appointmentsTable" layoutX="14.0" layoutY="176.0" prefHeight="131.0" prefWidth="942.0">
+            <columns>
+                <TableColumn fx:id="appointmentsColumn" prefWidth="60.0" text="Appointment_ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="50.0" text="Title" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="70.0" text="Description" />
+                <TableColumn fx:id="locationColumn" prefWidth="60.0" text="Location" />
+                <TableColumn fx:id="typeColumn" prefWidth="40.0" text="Type" />
+                <TableColumn fx:id="startColumn" text="Start" />
+                <TableColumn fx:id="endColumn" prefWidth="85.0" text="End" />
+                <TableColumn fx:id="create_DateColumn" prefWidth="73.0" text="Create_Date" />
+                <TableColumn fx:id="created_By" prefWidth="68.0" text="Created_By" />
+                <TableColumn fx:id="last_Update" prefWidth="75.0" text="Last_Update" />
+                <TableColumn fx:id="last_Updated_By" prefWidth="100.0" text="Last_Updated_By" />
+                <TableColumn fx:id="customer_ID" prefWidth="77.0" text="Customer_ID" />
+                <TableColumn fx:id="user_ID" prefWidth="49.0" text="User_ID" />
+            <TableColumn fx:id="Contact_ID" prefWidth="75.0" text="Contact_ID" />
+            </columns>
+        </TableView>
+      <DatePicker fx:id="datePicker" layoutX="316.0" layoutY="437.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="hourComboBox" layoutX="315.0" layoutY="470.0" prefHeight="25.0" prefWidth="61.0" />
+      <ComboBox fx:id="minutesComboBox" layoutX="315.0" layoutY="507.0" prefHeight="25.0" prefWidth="61.0" />
+      <Label layoutX="207.0" layoutY="513.0" text="Select Start Minutes" />
+      <Label layoutX="312.0" layoutY="329.0" text="User Name" />
+      <Button layoutX="230.0" layoutY="558.0" mnemonicParsing="false" onAction="#goBackToMenuPageButtonPressed" prefHeight="56.0" prefWidth="97.0" text="Go back to Menu page" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label layoutX="51.0" layoutY="435.0" prefHeight="111.0" prefWidth="140.0" text="In order to update date and time,  must enter new date, hour, and minutes." wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="106.0" prefHeight="62.0" prefWidth="328.0" text="Select appointment from below., then press the SELECT button. You will then be able to make changes in the fields below the table. Then push Update My Appointment button." wrapText="true" />
+      <Label layoutX="562.0" layoutY="441.0" text="End Date" />
+      <Label layoutX="519.0" layoutY="478.0" text="Select End Hour" />
+      <Label layoutX="519.0" layoutY="511.0" text="Select End Minutes" />
+      <DatePicker fx:id="EndDatePicker" layoutX="628.0" layoutY="437.0" prefHeight="25.0" prefWidth="155.0" />
+      <ComboBox fx:id="endHourComboBox" layoutX="629.0" layoutY="475.0" prefHeight="25.0" prefWidth="61.0" />
+      <ComboBox fx:id="endMinuteComboBox" layoutX="630.0" layoutY="507.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="customerNameTxt" layoutX="44.0" layoutY="325.0" prefHeight="25.0" prefWidth="133.0" />
+      <TextField fx:id="userNameTXT" layoutX="375.0" layoutY="325.0" prefHeight="25.0" prefWidth="123.0" />
+      <ComboBox fx:id="contactComboBox" layoutX="783.0" layoutY="366.0" onAction="#contactComboBoxSelected" prefWidth="150.0" />
+      <Label layoutX="727.0" layoutY="370.0" text="Contact" />
+      <Button layoutX="408.0" layoutY="109.0" mnemonicParsing="false" onAction="#selectAppointmentToUpdatePushed" prefHeight="56.0" prefWidth="113.0" text="Select Appointment" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="544.0" layoutY="325.0" mnemonicParsing="false" onAction="#pressToGetValidUserIDPressed" text="Press to get valid UserID" />
+      <TextField fx:id="customerTypeTxt" editable="false" layoutX="327.0" layoutY="41.0" promptText="US or non US customer" />
+    </children>
+</AnchorPane>

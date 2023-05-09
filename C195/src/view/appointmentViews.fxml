@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentViewsController">
+   <children>
+      <DatePicker fx:id="datePickerWithWeek" layoutX="343.0" layoutY="206.0" onAction="#datePickerWithWeekSelected" prefHeight="25.0" prefWidth="144.0" />
+      <RadioButton fx:id="appointmentByMonthRadio" layoutX="35.0" layoutY="68.0" mnemonicParsing="false" onAction="#appointmentByMonthRadioOn" text="Click Here to view appointments by month">
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentViewToggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="appointmentByWeekRadio" layoutX="370.0" layoutY="68.0" mnemonicParsing="false" onAction="#appointmentByWeekRadioOn" text="Click here to view appointments by week" toggleGroup="$appointmentViewToggle" />
+      <Label layoutX="43.0" layoutY="15.0" text="Appointment Views" />
+
+      <TableView fx:id="appointmentsViewTable" layoutX="10.0" layoutY="242.0" prefHeight="200.0" prefWidth="780.0">
+         <columns>
+            <TableColumn fx:id="WeekColumn" prefWidth="50.0" text="Week" />
+            <TableColumn fx:id="AppointmentIdColumn" prefWidth="51.0" text="Appointment_ID" />
+            <TableColumn fx:id="TitleColumn" prefWidth="74.0" text="Title" />
+            <TableColumn fx:id="DescriptionColumn" prefWidth="78.0" text="Description" />
+            <TableColumn fx:id="LocationColumn" prefWidth="92.0" text="Location" />
+            <TableColumn fx:id="ContactColumn" prefWidth="47.0" text="Contact" />
+            <TableColumn fx:id="TypeColumn" prefWidth="65.0" text="Type" />
+            <TableColumn fx:id="StartColumn" prefWidth="76.0" text="Start" />
+            <TableColumn fx:id="EndColumn" prefWidth="94.0" text="End" />
+            <TableColumn fx:id="CustomerIdColumn" prefWidth="83.0" text="Customer_ID" />
+            <TableColumn fx:id="UserIdColumn" prefWidth="47.0" text="User_ID" />
+
+         </columns>
+      </TableView>
+      <ComboBox fx:id="weekNumberComboBox" layoutX="496.0" layoutY="206.0" prefHeight="25.0" prefWidth="158.0" promptText="Select week number" />
+      <Label layoutX="340.0" layoutY="182.0" text="DatePicker with week number" />
+      <Label layoutX="370.0" layoutY="102.0" prefHeight="80.0" prefWidth="391.0" text="To view appointments by week, use the DatePicker to help you find the week number you need.  Then select the week number in the drop-down box, then click VIEW" wrapText="true" />
+      <Label layoutX="16.0" layoutY="151.0" prefHeight="44.0" prefWidth="290.0" text="To view appointments by month, select the month number in the drop-down box, then click VIEW" wrapText="true" />
+      <Button fx:id="viewWeek" layoutX="663.0" layoutY="206.0" mnemonicParsing="false" onAction="#viewWeekPressed" text="View Appointment By Week" />
+      <Label layoutX="285.0" layoutY="29.0" prefHeight="27.0" prefWidth="290.0" text="Select One">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="108.0" layoutY="465.0" mnemonicParsing="false" onAction="#backToMenuPagePushed" text="Back to Menu Page" />
+      <ComboBox fx:id="monthComboBox" layoutX="10.0" layoutY="206.0" onAction="#monthComboBoxSelected" prefHeight="25.0" prefWidth="131.0" promptText="Month Number" />
+      <Button fx:id="viewMonth" layoutX="154.0" layoutY="206.0" mnemonicParsing="false" onAction="#viewMonthPressed" text="View Appointments By Month" />
+      <Line endX="618.0" layoutX="122.0" layoutY="102.0" startX="-100.0" />
+      <Line endX="101.28611755371094" endY="3.904299020767212" layoutX="321.0" layoutY="147.0" rotate="90.0" startX="-68.58795928955078" startY="4.590587139129639" />
+
+   </children>
+</AnchorPane>

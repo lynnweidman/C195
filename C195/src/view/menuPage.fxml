@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPageController">
+      <Label layoutX="148.0" layoutY="14.0" text="Choose Where You Would Like To Go">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   <Button layoutX="206.0" layoutY="69.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#customersButtonPushed" prefHeight="25.0" prefWidth="189.0" text="Add New Customer" />
+   <Button layoutX="206.0" layoutY="152.0" mnemonicParsing="false" onAction="#makeAppointmentButtonPushed" prefHeight="25.0" prefWidth="189.0" text="Make an Appointment" />
+   <Button layoutX="206.0" layoutY="200.0" mnemonicParsing="false" onAction="#updateAppointmentButtonPushed" text="Update an Existing Appointment" />
+   <Button layoutX="205.0" layoutY="252.0" mnemonicParsing="false" onAction="#viewAppointmentsButtonPushed" prefHeight="25.0" prefWidth="189.0" text="View Appointments" />
+   <Button layoutX="206.0" layoutY="295.0" mnemonicParsing="false" onAction="#viewBusinessReportsButtonPushed" prefHeight="25.0" prefWidth="189.0" text="View Business Reports" />
+   <Button layoutX="206.0" layoutY="108.0" mnemonicParsing="false" onAction="#updateCustomerButtonPushed" prefWidth="189.0" text="Update Customer" />
+
+</AnchorPane>

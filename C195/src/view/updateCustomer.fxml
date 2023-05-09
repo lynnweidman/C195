@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomerController">
+   <children>
+      <Label layoutX="355.0" layoutY="17.0" text="Update Customer">
+         <font>
+            <Font name="System Bold" size="24.0" />
+      </font></Label>
+   <Label layoutX="14.0" layoutY="69.0" text="Customer Id" />
+   <Label layoutX="14.0" layoutY="114.0" text="Name" />
+   <Label layoutX="14.0" layoutY="163.0" text="Country" />
+   <Label layoutX="14.0" layoutY="216.0" text="Address" />
+   <Label layoutX="14.0" layoutY="262.0" prefHeight="35.0" prefWidth="65.0" text="State/ Provence" wrapText="true" />
+   <TextField fx:id="customerIdTxt" editable="false" layoutX="102.0" layoutY="65.0" />
+   <TextField fx:id="nameTxt" layoutX="102.0" layoutY="110.0" />
+
+   <TextField fx:id="addressTxt" layoutX="102.0" layoutY="212.0" />
+
+   <ComboBox fx:id="countryComboBox" layoutX="103.0" layoutY="159.0" onAction="#countrySelected" prefHeight="25.0" prefWidth="149.0" />
+   <ComboBox fx:id="firstLevelDivisionComboBox" layoutX="103.0" layoutY="267.0" prefHeight="25.0" prefWidth="149.0" />
+   <TextField fx:id="customerPostalCode" layoutX="102.0" layoutY="332.0" />
+   <Label layoutX="14.0" layoutY="336.0" text="Postal Code" />
+   <Label layoutX="14.0" layoutY="386.0" text="Phone" />
+   <TextField fx:id="customerPhone" layoutX="102.0" layoutY="382.0" />
+
+   <TableView fx:id="addCustomerTable" layoutX="268.0" layoutY="206.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="513.0">
+      <columns>
+         <TableColumn maxWidth="-1.0" minWidth="-Infinity" prefWidth="-1.0" text="C1" />
+         <TableColumn fx:id="tableCustomerID" prefWidth="72.0" text="Cust_ID" />
+         <TableColumn fx:id="tableCustomerName" prefWidth="72.0" text="Cust_Name" />
+         <TableColumn fx:id="tableAddress" prefWidth="72.0" text="Address" />
+         <TableColumn fx:id="tablePostalCode" prefWidth="72.0" text="Postal_Code" />
+         <TableColumn fx:id="tablePhone" prefWidth="72.0" text="Phone" />
+         <TableColumn fx:id="tableDivisionID" minWidth="-1.0" prefWidth="72.0" text="Division_ID" />
+         <TableColumn fx:id="tableCountryID" minWidth="-1.0" prefWidth="72.0" text="Country_ID" />
+      </columns>
+   </TableView>
+   <Button layoutX="567.0" layoutY="172.0" mnemonicParsing="false" onAction="#deleteCustomerButtonPressed" text="Delete Selected Customer" wrapText="true" />
+   <Button fx:id="saveUpdateButton" layoutX="167.0" layoutY="421.0" mnemonicParsing="false" onAction="#saveUpdateButtonPushed" text="Save Update" />
+   <Button layoutX="308.0" layoutY="172.0" mnemonicParsing="false" onAction="#SelectCustomerToUpdateButtonPushed" text="Select Customer to Update" />
+      <Label layoutX="264.0" layoutY="105.0" prefHeight="61.0" prefWidth="247.0" text="Select a customer from the table below, then press &quot;Select Customer to Update&quot;. You can then make updates in the fields to the left." wrapText="true" />
+      <Label layoutX="306.0" layoutY="80.0" text="To Update Customer Info">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="538.0" layoutY="127.0" prefHeight="35.0" prefWidth="222.0" text="Select a customer from the table below, then press &quot;Delete Selected Customer&quot;." wrapText="true" />
+      <Label layoutX="578.0" layoutY="95.0" text="To Delete a Customer">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="308.0" layoutY="398.0" mnemonicParsing="false" onAction="#backToMenuPagePushed" text="Back to Menu Page" />
+      <TextField fx:id="searchByCustomerName" layoutX="14.0" layoutY="22.0" onAction="#onSearchByCustomerName" prefHeight="25.0" prefWidth="237.0" promptText="Optional Search By Customer Name" />
+
+
+
+   </children>
+</AnchorPane>
